@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    box-sizing: border-box;
+    
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+
+    @include desktop{
+        width: 1200px;
+    }
+}
+
+.flexbox{
+    display: flex;
+}
+
+.list{
+    list-style: none;
+}
+
+.link{
+    text-decoration: none;
+}
