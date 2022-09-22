@@ -70,7 +70,7 @@
     <main>
         <section class="hero">
             <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <button type="button" class="button hero-button">Заказать услугу</button>
+            <button data-modal-open type="button" class="button hero-button">Заказать услугу</button>
         </section>
 
         <section class="features-section section">
@@ -335,5 +335,54 @@
             </div>
         </div>
     </footer>
+
+    <div data-modal class="modal is-hidden">
+        <div class="window">
+            <h2>Оставьте свои данные, мы вам перезвоним</h2>
+            <form action="" method="post">
+                <div class="form">
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" id="name">
+                    <svg width="18" height="18"  >
+                        <use href="./images/icons.svg#person-black"></use>
+                    </svg>
+                </div>
+
+                <div class="form">
+                    <label for="tel">Телефон</label>
+                    <input type="tel" name="tel" id="tel">
+                    <svg width="18" height="18"  >
+                        <use href="./images/icons.svg#phone-black"></use>
+                    </svg>
+                </div>
+
+                <div class="form">
+                    <label for="mailbox">Почта</label>
+                    <input type="email" name="mail" id="mail">
+                    <svg width="18" height="18"  >
+                        <use href="./images/icons.svg#email-black"></use>
+                    </svg>
+                </div>
+
+                <div role="group" class="agreement">
+                    <label>
+                        <input type="checkbox" name="agreement" />
+                        <span class="agreement-icon"></span>Соглашаюсь с рассылкой и принимаю<a class="agreement-link" target="_blank" rel="noopener noreferrer" href="#">Условия договора</a></label>
+                </div>
+                <button type="submit" class="button agreement-submit">Отправить</button>
+            </form>
+            <button class="closebtn" data-modal-close type="button">
+                <svg width="11" height="11">
+                    <use href="./images/icons.svg#close-black"></use>
+                </svg>
+            </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
+
+
 </html>
