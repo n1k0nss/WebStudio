@@ -6,9 +6,7 @@
 body{
     font-family: Roboto, sans-serif;
     font-weight: normal;
-    box-sizing: border-box;
-
-    background-color: $second-color;
+    position: relative;
     
 }
 
@@ -23,9 +21,6 @@ body{
     }
 }
 
-.flexbox{
-    display: flex;
-}
 
 .list{
     list-style: none;
@@ -48,12 +43,19 @@ body{
         letter-spacing: 0.03em;
         color: $main-color;
     }
+
+    @include desktop{
+        font-size: 36px;
+    }
 }
 
 .button{
     border: none;
 }
 
-.is-hidden{
-    display: none;
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+    
 }

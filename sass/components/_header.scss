@@ -1,0 +1,135 @@
+.is-locked{
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+header{
+    width: 100%;
+    border: 1px solid #ECECEC;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo{
+    height: 28px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: $main-color;
+    align-self: center;
+
+    span{
+        color: $hover-color;
+    }
+}
+
+.mobile-wrapper{
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    padding: 40px 48px;
+    padding-bottom: 80px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: none;
+    box-sizing: border-box;
+    
+    &.is-open{
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+    }
+}
+
+
+
+.mobile-menu-btn{
+    z-index: 6;
+    background-color: transparent;
+    fill: $main-color;
+    width: 40px;
+    height: 40px;
+    display: block;
+    align-self: center;
+
+    &:hover{
+        fill: $hover-color;
+    }
+    & use:first-child{
+        display: none;
+    }
+
+    &.is-open{
+        & use:last-child{
+            display: none;
+        } 
+        & use:first-child{
+            display: block;
+        }
+    }
+}
+
+.header-contacts-list{
+    display: flex;
+    flex-direction: column-reverse;
+    letter-spacing: 0.02em;
+
+    &>li:last-child{
+        a{
+            font-size: 34px;
+            color: $hover-color;
+            line-height: 1.2;
+        }
+
+        margin-bottom: 32px;
+    }
+
+    &>li:first-child{
+        a{
+            font-size: 24px;
+            line-height: 28px;
+            color: $second-color;
+        }
+    }
+
+    & svg{
+        display: none;
+    }
+}
+
+.nav-list>li:not(:last-child){
+    margin-bottom: 36px;
+}
+
+.nav-item{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    color: $main-color;
+
+    &.active-page{
+        color: $hover-color;
+    }
+}
+
+
+
+
