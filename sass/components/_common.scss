@@ -43,11 +43,13 @@ body{
         text-align: center;
         letter-spacing: 0.03em;
         color: $main-color;
+
+        @include desktop{
+            font-size: 36px;
+        }
     }
 
-    @include desktop{
-        font-size: 36px;
-    }
+    
 }
 
 .button{

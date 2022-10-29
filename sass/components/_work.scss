@@ -1,4 +1,44 @@
 .work-section{
     display: none;
     pointer-events: none;
+    @include desktop{
+        display: block;
+        pointer-events: all;
+    }
+}
+
+@include desktop{
+    .work-list{
+        display: flex;
+        margin-top: 50px;
+    }
+    .work-list__item{
+        margin: 15px;
+        position: relative;
+    }
+    .work-list__item>img{
+        width: 370px;
+        height: 294px;
+    }
+    .work-list__item>p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: rgba(47, 48, 58, 0.8);
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+    }
 }

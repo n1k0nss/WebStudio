@@ -33,6 +33,10 @@
 
         color: #212121;
     }
+
+    @include desktop{
+        width: 528px;
+    }
 }
 
 .form{
@@ -69,6 +73,17 @@
         letter-spacing: 0.01em;
 
         color: rgba(117, 117, 117, 0.5);
+
+        &:focus{
+            outline: 1px solid $hover-color;
+        }
+
+
+        @include desktop{
+            width: 448px;
+        }
+
+
     }
 
     &>textarea{
@@ -88,6 +103,16 @@
         letter-spacing: 0.01em;
 
         color: rgba(117, 117, 117, 0.5);
+
+        &:focus{
+            outline: 1px solid $hover-color;
+        }
+
+        
+
+        @include desktop{
+            width: 448px;
+        }
     }
 
     &>svg{
@@ -97,8 +122,13 @@
     }
 }
 
+.form>input:focus + svg{
+    fill: $hover-color;
+}
+
 .agreement{
     margin-top: 20px;
+    text-align: center;
 
     &>label{
         display: inline-flex;
@@ -180,6 +210,10 @@
 
     &:active{
         background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    &:hover{
+        fill: $hover-color;
     }
 
     
